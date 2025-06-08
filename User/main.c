@@ -105,15 +105,14 @@ void After_Found_Card(void)
       ILI9341_DispStringLine_EN(LINE(4), "Temperature healthy !");
       LED_Green_On();
       BUZZER_On();
-
     }
 
     else
     {
       ILI9341_DispStringLine_EN(LINE(4), "Please Re-measure your body temperature!");
-      LED_Green_On();
+
       BUZZER_On();
-   
+      LED_Flash(RED_LED, 7); // 红灯闪烁三次
     }
   }
   else
@@ -121,21 +120,16 @@ void After_Found_Card(void)
 
     ILI9341_DispStringLine_EN(LINE(3), "illegal access!");
     BUZZER_On();
-    LED_Flash(RED_LED, 1); // 红灯闪烁三次
-    LED_Flash(RED_LED, 1); // 红灯闪烁三次
-    LED_Flash(RED_LED, 1); // 红灯闪烁三次
-    LED_Flash(RED_LED, 1); // 红灯闪烁三次
-    LED_Flash(RED_LED, 1); // 红灯闪烁三次
-    LED_Flash(RED_LED, 1); // 红灯闪烁三次
+    LED_Flash(RED_LED, 7); // 红灯闪烁三次
   }
-  delay_10ms(400);
+  delay_10ms(100);
   /////////////一切工作都做完之后，执行下面这些。
   ILI9341_DispStringLine_EN(LINE(3), "                                     "); // 清空这两行屏幕
   ILI9341_DispStringLine_EN(LINE(4), "                                     ");
   ILI9341_DispStringLine_EN(LINE(5), "                                     ");
   id_find_card = 0; //  0 代表着没找到卡,更新全局标志变量。
   LED_Cyan_On();
-   BUZZER_Off();
+  BUZZER_Off();
 }
 
 void Running_Light(unsigned int time_counts) //  参数说明，流水灯循环的次数
