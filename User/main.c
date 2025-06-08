@@ -99,8 +99,18 @@ void After_Found_Card(void)
   {
 
     ILI9341_DispStringLine_EN(LINE(3), "Welcomeback");
-    LED_Green_On();
-    
+   
+    if((measure_body_temperature>30)&&(measure_body_temperature<37.4))
+    {
+       ILI9341_DispStringLine_EN(LINE(4), "Temperature healthy !");
+        LED_Green_On();
+    }
+
+    else 
+    {
+      ILI9341_DispStringLine_EN(LINE(4), "Please Re-measure your body temperature!");
+        LED_Green_On();
+    }
 
   }
   else
@@ -123,6 +133,7 @@ void After_Found_Card(void)
   /////////////一切工作都做完之后，执行下面这些。
   ILI9341_DispStringLine_EN(LINE(3), "                                     "); // 清空这两行屏幕
   ILI9341_DispStringLine_EN(LINE(4), "                                     ");
+  ILI9341_DispStringLine_EN(LINE(5), "                                     ");
   id_find_card = 0; //  0 代表着没找到卡,更新全局标志变量。
   LED_Cyan_On();
 }
