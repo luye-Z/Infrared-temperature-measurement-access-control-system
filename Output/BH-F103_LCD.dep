@@ -699,7 +699,7 @@ I (..\..\Libraries\FWlib\inc\stm32f10x_spi.h)(0x6551DD3E)
 I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x6551DD3E)
 I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x6551DD3E)
 I (..\..\Libraries\FWlib\inc\misc.h)(0x6551DD3E)
-F (..\..\User\main.c)(0x68443213)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\User\RC522 -I ..\..\User\MySPI -I ..\..\User\lcd -I ..\..\User\font -I ..\..\User\usart-I.\RTE\_LCD-ID:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\main.o --omf_browse ..\..\output\main.crf --depend ..\..\output\main.d)
+F (..\..\User\main.c)(0x6845117E)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\User\RC522 -I ..\..\User\MySPI -I ..\..\User\lcd -I ..\..\User\font -I ..\..\User\usart-I.\RTE\_LCD-ID:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\main.o --omf_browse ..\..\output\main.crf --depend ..\..\output\main.d)
 I (..\..\Libraries\CMSIS\stm32f10x.h)(0x6551DD3E)
 I (..\..\Libraries\CMSIS\core_cm3.h)(0x6551DD3E)
 I (D:\keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
@@ -735,7 +735,7 @@ I (..\..\User\usart\bsp_usart.h)(0x6551DD3E)
 I (D:\keil\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (..\..\User\RC522\RC522.h)(0x6842E700)
 I (..\..\User\MySPI\MySPI.h)(0x68404704)
-I (..\..\User\MLX90614.h)(0x684400A3)
+I (..\..\User\MLX90614.h)(0x68451008)
 I (..\..\User\Delay.h)(0x6842D9A7)
 I (..\..\User\LED.h)(0x6843F7CC)
 I (..\..\User\BUZZER.h)(0x684404E3)
@@ -933,8 +933,8 @@ I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x6551DD3E)
 I (..\..\Libraries\FWlib\inc\stm32f10x_wwdg.h)(0x6551DD3E)
 I (..\..\Libraries\FWlib\inc\misc.h)(0x6551DD3E)
 I (..\..\User\MySPI\MySPI.h)(0x68404704)
-F (..\..\User\MLX90614.c)(0x6844006A)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\User\RC522 -I ..\..\User\MySPI -I ..\..\User\lcd -I ..\..\User\font -I ..\..\User\usart-I.\RTE\_LCD-ID:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\mlx90614.o --omf_browse ..\..\output\mlx90614.crf --depend ..\..\output\mlx90614.d)
-I (..\..\User\MLX90614.h)(0x684400A3)
+F (..\..\User\MLX90614.c)(0x68451008)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\User\RC522 -I ..\..\User\MySPI -I ..\..\User\lcd -I ..\..\User\font -I ..\..\User\usart-I.\RTE\_LCD-ID:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\mlx90614.o --omf_browse ..\..\output\mlx90614.crf --depend ..\..\output\mlx90614.d)
+I (..\..\User\MLX90614.h)(0x68451008)
 I (..\..\Libraries\CMSIS\stm32f10x.h)(0x6551DD3E)
 I (..\..\Libraries\CMSIS\core_cm3.h)(0x6551DD3E)
 I (D:\keil\ARM\ARMCC\include\stdint.h)(0x588B8344)

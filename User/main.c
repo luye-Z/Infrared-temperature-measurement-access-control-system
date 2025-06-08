@@ -96,7 +96,7 @@ void After_Found_Card(void)
   if (Adjust_if_card_knowm() == 1) // 这张卡在系统中录入过
   {
     ILI9341_DispStringLine_EN(LINE(3), "Welcomeback");
-    ILI9341_DispStringLine_EN(LINE(4), "We will measure your temperature");
+
     LED_Green_On();
   }
   else
