@@ -20,15 +20,15 @@ void Delay(__IO uint32_t nCount);
 /////////////
 void After_Found_Card(void);
 void Running_Light(unsigned int time_counts); //  参数说明，流水灯循环的次数
-void Show_User_Mode(void );
+void Show_User_Mode(void);
 void Temperature_Check(float temp);
 /////////////////////********全局变量*****************////////////////////////
 unsigned char id_find_card = 0; //   0 没有找到卡
 uint8_t Now_Card_UID[UID_LENGTH] = {0};
 float temperature = 0;
 float now_temp = 0;
-float measure_body_temperature = 0 ; 
-unsigned int USER_MODE = 0 ; 
+float measure_body_temperature = 0;
+unsigned int USER_MODE = 0;
 /////////////////////////////////////////////////////////////////
 
 int main(void)
@@ -46,7 +46,7 @@ int main(void)
   RFID_Init();
   LED_Init();
   BUZZER_Init();
-	KEY_EXTI_Init();
+  KEY_EXTI_Init();
   /////////////////****************************************** */
 
   //////////////初始化测试函数//////////////////////
@@ -62,9 +62,9 @@ int main(void)
   ////////////////////////////////////////
   while (1)
   {
-		Show_User_Mode();
+    Show_User_Mode();
     now_temp = MLX9_LCD_show_temperature();
-     measure_body_temperature   = now_temp ; 
+    measure_body_temperature = now_temp;
     // Temperature_Check(now_temp);
     Rc522Test();
     if (id_find_card == 1) // 如果找到卡了，进入一个处理函数 ， AFTER_FIND_CARD
@@ -98,36 +98,35 @@ void After_Found_Card(void)
   if (Adjust_if_card_knowm() == 1) // 这张卡在系统中录入过
   {
 
-    ILI9341_DispStringLine_EN(LINE(3), "Welcomeback");
-   
-    if((measure_body_temperature>30)&&(measure_body_temperature<37.4))
+    ILI9341_DispStringLine_EN(LINE(3), "Welcomeback !");
+
+    if ((measure_body_temperature > 30) && (measure_body_temperature < 37.4))
     {
-       ILI9341_DispStringLine_EN(LINE(4), "Temperature healthy !");
-        LED_Green_On();
+      ILI9341_DispStringLine_EN(LINE(4), "Temperature healthy !");
+      LED_Green_On();
+      BUZZER_On();
+
     }
 
-    else 
+    else
     {
       ILI9341_DispStringLine_EN(LINE(4), "Please Re-measure your body temperature!");
-        LED_Green_On();
+      LED_Green_On();
+      BUZZER_On();
+   
     }
-
   }
   else
   {
 
     ILI9341_DispStringLine_EN(LINE(3), "illegal access!");
-    LED_Flash(RED_LED, 1); // 红灯闪烁三次
-    LED_Flash(RED_LED, 1); // 红灯闪烁三次
-    LED_Flash(RED_LED, 1); // 红灯闪烁三次
     BUZZER_On();
-    delay_10ms(2);
-    BUZZER_Off();
-
     LED_Flash(RED_LED, 1); // 红灯闪烁三次
     LED_Flash(RED_LED, 1); // 红灯闪烁三次
     LED_Flash(RED_LED, 1); // 红灯闪烁三次
-
+    LED_Flash(RED_LED, 1); // 红灯闪烁三次
+    LED_Flash(RED_LED, 1); // 红灯闪烁三次
+    LED_Flash(RED_LED, 1); // 红灯闪烁三次
   }
   delay_10ms(400);
   /////////////一切工作都做完之后，执行下面这些。
@@ -136,6 +135,7 @@ void After_Found_Card(void)
   ILI9341_DispStringLine_EN(LINE(5), "                                     ");
   id_find_card = 0; //  0 代表着没找到卡,更新全局标志变量。
   LED_Cyan_On();
+   BUZZER_Off();
 }
 
 void Running_Light(unsigned int time_counts) //  参数说明，流水灯循环的次数
@@ -160,23 +160,22 @@ void Temperature_Check(float temp)
   }
 }
 
-
-void Show_User_Mode(void )
+void Show_User_Mode(void)
 {
-if(USER_MODE == 0)
-{
-	    ILI9341_DispStringLine_EN(LINE(1), " MODE 0 ");
-}
-else if(USER_MODE == 1)
-{
-	    ILI9341_DispStringLine_EN(LINE(1), " MODE 1 ");
-}
-else if(USER_MODE == 2)
-{
-	    ILI9341_DispStringLine_EN(LINE(1), " MODE 2 ");
-}
-else if(USER_MODE == 3)
-{
-	    ILI9341_DispStringLine_EN(LINE(1), " MODE 3");
-}
+  if (USER_MODE == 0)
+  {
+    ILI9341_DispStringLine_EN(LINE(1), " MODE 0 ");
+  }
+  else if (USER_MODE == 1)
+  {
+    ILI9341_DispStringLine_EN(LINE(1), " MODE 1 ");
+  }
+  else if (USER_MODE == 2)
+  {
+    ILI9341_DispStringLine_EN(LINE(1), " MODE 2 ");
+  }
+  else if (USER_MODE == 3)
+  {
+    ILI9341_DispStringLine_EN(LINE(1), " MODE 3");
+  }
 }
