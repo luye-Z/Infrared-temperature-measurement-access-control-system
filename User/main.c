@@ -27,6 +27,7 @@ unsigned char id_find_card = 0; //   0 没有找到卡
 uint8_t Now_Card_UID[UID_LENGTH] = {0};
 float temperature = 0;
 float now_temp = 0;
+float measure_body_temperature = 0 ; 
 unsigned int USER_MODE = 0 ; 
 /////////////////////////////////////////////////////////////////
 
@@ -63,6 +64,7 @@ int main(void)
   {
 		Show_User_Mode();
     now_temp = MLX9_LCD_show_temperature();
+     measure_body_temperature   = now_temp ; 
     // Temperature_Check(now_temp);
     Rc522Test();
     if (id_find_card == 1) // 如果找到卡了，进入一个处理函数 ， AFTER_FIND_CARD
@@ -95,12 +97,15 @@ void After_Found_Card(void)
 
   if (Adjust_if_card_knowm() == 1) // 这张卡在系统中录入过
   {
-    ILI9341_DispStringLine_EN(LINE(3), "Welcomeback");
 
+    ILI9341_DispStringLine_EN(LINE(3), "Welcomeback");
     LED_Green_On();
+    
+
   }
   else
   {
+
     ILI9341_DispStringLine_EN(LINE(3), "illegal access!");
     LED_Flash(RED_LED, 1); // 红灯闪烁三次
     LED_Flash(RED_LED, 1); // 红灯闪烁三次
@@ -112,6 +117,7 @@ void After_Found_Card(void)
     LED_Flash(RED_LED, 1); // 红灯闪烁三次
     LED_Flash(RED_LED, 1); // 红灯闪烁三次
     LED_Flash(RED_LED, 1); // 红灯闪烁三次
+
   }
   delay_10ms(400);
   /////////////一切工作都做完之后，执行下面这些。
