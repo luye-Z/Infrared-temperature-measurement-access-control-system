@@ -1,6 +1,10 @@
 #include "stm32f10x.h"
 #include "Relay.h"
 
+
+//引脚连接  信号引脚  PC8
+//VCC  3.3    GND 
+
 void Relay_GPIO_Config(void)
 {
 	 GPIO_InitTypeDef GPIO_InitStructure;
