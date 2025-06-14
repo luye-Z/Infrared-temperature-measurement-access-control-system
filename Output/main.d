@@ -41,3 +41,4 @@
 ..\..\output\main.o: ..\..\User\LED.h
 ..\..\output\main.o: ..\..\User\BUZZER.h
 ..\..\output\main.o: ..\..\User\Key_exit.h
+..\..\output\main.o: ..\..\User\Relay.h

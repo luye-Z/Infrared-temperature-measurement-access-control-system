@@ -1,0 +1,26 @@
+#include "stm32f10x.h"
+#include "Relay.h"
+
+void Relay_GPIO_Config(void)
+{
+	 GPIO_InitTypeDef GPIO_InitStructure;
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);  // 开启GPIOC时钟
+
+
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8;             // PC8
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;      // 推挽输出
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;     // 输出速度
+    GPIO_Init(GPIOC, &GPIO_InitStructure);
+
+    GPIO_SetBits(GPIOC, GPIO_Pin_8); // 默认关闭继电器（输出高电平）
+}
+
+void Relay_On(void)
+{
+    GPIO_ResetBits(GPIOC, GPIO_Pin_8);  // 输出低电平，继电器吸合
+}
+
+void Relay_Off(void)
+{
+    GPIO_SetBits(GPIOC, GPIO_Pin_8);   // 输出高电平，继电器释放
+}

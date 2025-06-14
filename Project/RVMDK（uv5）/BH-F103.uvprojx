@@ -595,6 +595,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\User\Key_exit.c</FilePath>
             </File>
+            <File>
+              <FileName>Relay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\Relay.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

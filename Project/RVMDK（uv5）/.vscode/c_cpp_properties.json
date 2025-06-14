@@ -3,20 +3,20 @@
         {
             "name": "LCD",
             "includePath": [
-                "e:\\STM32CUBEMX_project_2025_05\\0608\\主代码_标准库_增加按键中断\\Libraries\\CMSIS",
-                "e:\\STM32CUBEMX_project_2025_05\\0608\\主代码_标准库_增加按键中断\\User",
-                "e:\\STM32CUBEMX_project_2025_05\\0608\\主代码_标准库_增加按键中断\\Libraries\\FWlib\\inc",
-                "e:\\STM32CUBEMX_project_2025_05\\0608\\主代码_标准库_增加按键中断\\User\\RC522",
-                "e:\\STM32CUBEMX_project_2025_05\\0608\\主代码_标准库_增加按键中断\\User\\MySPI",
-                "e:\\STM32CUBEMX_project_2025_05\\0608\\主代码_标准库_增加按键中断\\User\\lcd",
-                "e:\\STM32CUBEMX_project_2025_05\\0608\\主代码_标准库_增加按键中断\\User\\font",
-                "e:\\STM32CUBEMX_project_2025_05\\0608\\主代码_标准库_增加按键中断\\User\\usart",
+                "e:\\STM32CUBEMX_project_2025_05\\0610_14\\主代码_标准库_增加按键中断\\Libraries\\CMSIS",
+                "e:\\STM32CUBEMX_project_2025_05\\0610_14\\主代码_标准库_增加按键中断\\User",
+                "e:\\STM32CUBEMX_project_2025_05\\0610_14\\主代码_标准库_增加按键中断\\Libraries\\FWlib\\inc",
+                "e:\\STM32CUBEMX_project_2025_05\\0610_14\\主代码_标准库_增加按键中断\\User\\RC522",
+                "e:\\STM32CUBEMX_project_2025_05\\0610_14\\主代码_标准库_增加按键中断\\User\\MySPI",
+                "e:\\STM32CUBEMX_project_2025_05\\0610_14\\主代码_标准库_增加按键中断\\User\\lcd",
+                "e:\\STM32CUBEMX_project_2025_05\\0610_14\\主代码_标准库_增加按键中断\\User\\font",
+                "e:\\STM32CUBEMX_project_2025_05\\0610_14\\主代码_标准库_增加按键中断\\User\\usart",
                 "D:\\Keil\\ARM\\ARMCC\\include",
                 "D:\\Keil\\ARM\\ARMCC\\include\\rw",
-                "e:\\STM32CUBEMX_project_2025_05\\0608\\主代码_标准库_增加按键中断\\Libraries\\CMSIS\\startup",
-                "e:\\STM32CUBEMX_project_2025_05\\0608\\主代码_标准库_增加按键中断\\Libraries\\FWlib\\src",
-                "e:\\STM32CUBEMX_project_2025_05\\0608\\主代码_标准库_增加按键中断\\User\\Lcd",
-                "e:\\STM32CUBEMX_project_2025_05\\0608\\主代码_标准库_增加按键中断\\Doc"
+                "e:\\STM32CUBEMX_project_2025_05\\0610_14\\主代码_标准库_增加按键中断\\Libraries\\CMSIS\\startup",
+                "e:\\STM32CUBEMX_project_2025_05\\0610_14\\主代码_标准库_增加按键中断\\Libraries\\FWlib\\src",
+                "e:\\STM32CUBEMX_project_2025_05\\0610_14\\主代码_标准库_增加按键中断\\User\\Lcd",
+                "e:\\STM32CUBEMX_project_2025_05\\0610_14\\主代码_标准库_增加按键中断\\Doc"
             ],
             "defines": [
                 "STM32F10X_HD",

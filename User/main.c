@@ -10,6 +10,7 @@
 #include "LED.h"
 #include "BUZZER.h"
 #include "Key_exit.h"
+#include "Relay.h"
 
 /// @brief ///////
 /// @param nCount
@@ -47,6 +48,8 @@ int main(void)
   LED_Init();
   BUZZER_Init();
   KEY_EXTI_Init();
+	Relay_GPIO_Config();
+
   /////////////////****************************************** */
 
   //////////////初始化测试函数//////////////////////
@@ -58,6 +61,7 @@ int main(void)
   ////////////////////////////////////////
   // Running_Light(3);
   LED_Cyan_On();
+Relay_On();
   // BUZZER_Beep(5);  ///////初始化成功，提示音乐
   ////////////////////////////////////////
   while (1)
