@@ -72,7 +72,7 @@ int main(void)
 		  Show_User_Mode();
 		  now_temp = MLX9_LCD_show_temperature();
 	}
-	else 
+	else  if (USER_MODE == 2 )
 	{
     Show_User_Mode();
     now_temp = MLX9_LCD_show_temperature();
@@ -183,7 +183,7 @@ void Show_User_Mode(void)
   }
   else if (USER_MODE == 2)
   {
-    ILI9341_DispStringLine_EN(LINE(1), " MODE 2                                 ");
+    ILI9341_DispStringLine_EN(LINE(1), " MODE 2 WORK MODE                        ");
   }
   else if (USER_MODE == 3)
   {
