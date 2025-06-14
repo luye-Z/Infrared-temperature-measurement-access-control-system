@@ -974,10 +974,10 @@ void Rc522Test(void)
     // uint8_t Card_UID[4] = {0};
     int anticoll_ret = PcdAnticoll(Now_Card_UID);
 
-    unsigned char original_value = ReadRawRC(0x26);
-    sprintf(display_str, "Address:0x%02X Original:0x%02X", 0x26, original_value);
+////    unsigned char original_value = ReadRawRC(0x26);
+////    sprintf(display_str, "Address:0x%02X Original:0x%02X", 0x26, original_value);
 
-    ILI9341_DispStringLine_EN(LINE(15), display_str);
+//    ILI9341_DispStringLine_EN(LINE(15), display_str);
 
     if (ret == 0) // ∑¢œ÷ø®∆¨
     {
