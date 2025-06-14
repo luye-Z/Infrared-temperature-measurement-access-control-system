@@ -27,6 +27,7 @@
 #include "stm32f10x_it.h"
 #include "./lcd/bsp_ili9341_lcd.h"
 #include "Key_exit.h"
+#include "Relay.h"
 
 /** @addtogroup STM32F10x_StdPeriph_Template
   * @{
@@ -150,6 +151,8 @@ void EXTI0_IRQHandler(void)
 {
 	 EXTI_ClearITPendingBit(EXTI_Line0); 
        Change_Use_Mode();
+	Change_relay_status();
+	
 }
 
 

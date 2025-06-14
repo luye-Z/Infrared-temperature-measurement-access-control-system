@@ -30,6 +30,7 @@ float temperature = 0;
 float now_temp = 0;
 float measure_body_temperature = 0;
 unsigned int USER_MODE = 0;
+unsigned int Is_relay_on = 0 ; 
 /////////////////////////////////////////////////////////////////
 
 int main(void)

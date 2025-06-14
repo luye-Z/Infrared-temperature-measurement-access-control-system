@@ -33,3 +33,4 @@
 ..\..\output\stm32f10x_it.o: ..\..\User\font\fonts.h
 ..\..\output\stm32f10x_it.o: ..\..\User\./font/fonts.h
 ..\..\output\stm32f10x_it.o: ..\..\User\Key_exit.h
+..\..\output\stm32f10x_it.o: ..\..\User\Relay.h

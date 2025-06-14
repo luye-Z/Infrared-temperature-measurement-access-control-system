@@ -18,9 +18,25 @@ void Relay_GPIO_Config(void)
 void Relay_On(void)
 {
     GPIO_ResetBits(GPIOC, GPIO_Pin_8);  // 输出低电平，继电器吸合
+	Is_relay_on = 1; 
 }
 
 void Relay_Off(void)
 {
     GPIO_SetBits(GPIOC, GPIO_Pin_8);   // 输出高电平，继电器释放
+		Is_relay_on = 0;
+}
+
+void Change_relay_status(void)
+{
+	
+if(Is_relay_on ==  0 )
+{
+Relay_On();
+}
+else 
+{
+	Relay_Off();
+}
+
 }
