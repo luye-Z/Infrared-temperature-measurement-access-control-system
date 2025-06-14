@@ -74,7 +74,7 @@ int main(void)
 	}
 	else if (USER_MODE ==1 )
 	{
-		  Rc522Test();
+		Rc522Test();
 		 if (id_find_card == 1) // 如果找到卡了，进入一个处理函数 ， AFTER_FIND_CARD
     {
      delay_10ms(150);
@@ -189,7 +189,7 @@ void Show_User_Mode(void)
   else if (USER_MODE == 1)
   {
     ILI9341_DispStringLine_EN(LINE(1), " MODE 1 CARD DETECTED                          ");
-		 ILI9341_DispStringLine_EN(LINE(4), "                                            ");
+		 ILI9341_DispStringLine_EN(LINE(6), "                                            ");
   }
   else if (USER_MODE == 2)
   {
