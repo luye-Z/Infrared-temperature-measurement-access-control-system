@@ -81,7 +81,21 @@ int main(void)
      delay_10ms(150);
     }
 	}
-	else  if ((USER_MODE == 2  )||(USER_MODE == 3  ))
+	else  if (USER_MODE == 2  )
+	{
+    Show_User_Mode();
+    now_temp = MLX9_LCD_show_temperature();
+    measure_body_temperature = now_temp;
+    // Temperature_Check(now_temp);
+    Rc522Test();
+    if (id_find_card == 1) // 如果找到卡了，进入一个处理函数 ， AFTER_FIND_CARD
+    {
+      After_Found_Card();
+    }
+
+    Delay(1);
+	}
+	else if (USER_MODE == 3 )
 	{
     Show_User_Mode();
     now_temp = MLX9_LCD_show_temperature();
@@ -194,10 +208,10 @@ void Show_User_Mode(void)
   }
   else if (USER_MODE == 2)
   {
-    ILI9341_DispStringLine_EN(LINE(1), " MODE 2 WORK MODE                        ");
+    ILI9341_DispStringLine_EN(LINE(1), " MODE 2 WORK_MODE                        ");
   }
   else if (USER_MODE == 3)
   {
-    ILI9341_DispStringLine_EN(LINE(1), " MODE 3 WORK_MODE_TEST                       ");
+    ILI9341_DispStringLine_EN(LINE(1), " MODE 3 DEVELOP_TEST                       ");
   }
 }
