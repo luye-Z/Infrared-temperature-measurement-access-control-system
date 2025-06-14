@@ -74,13 +74,14 @@ int main(void)
 	}
 	else if (USER_MODE ==1 )
 	{
+		  Show_User_Mode();
 		Rc522Test();
 		 if (id_find_card == 1) // 如果找到卡了，进入一个处理函数 ， AFTER_FIND_CARD
     {
      delay_10ms(150);
     }
 	}
-	else  if (USER_MODE == 2 )
+	else  if ((USER_MODE == 2  )||(USER_MODE == 3  ))
 	{
     Show_User_Mode();
     now_temp = MLX9_LCD_show_temperature();
@@ -197,6 +198,6 @@ void Show_User_Mode(void)
   }
   else if (USER_MODE == 3)
   {
-    ILI9341_DispStringLine_EN(LINE(1), " MODE 3                                  ");
+    ILI9341_DispStringLine_EN(LINE(1), " MODE 3 WORK_MODE_TEST                       ");
   }
 }
