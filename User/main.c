@@ -61,12 +61,19 @@ int main(void)
 
   ////////////////////////////////////////
   // Running_Light(3);
-  LED_Cyan_On();
-Relay_Off();
+		LED_Cyan_On();
+//    Relay_Off();  //  初始化关闭 继电器
   // BUZZER_Beep(5);  ///////初始化成功，提示音乐
   ////////////////////////////////////////
   while (1)
   {
+			if(USER_MODE==0 )  //  仅仅温度显示功能
+	{
+		  Show_User_Mode();
+		  now_temp = MLX9_LCD_show_temperature();
+	}
+	else 
+	{
     Show_User_Mode();
     now_temp = MLX9_LCD_show_temperature();
     measure_body_temperature = now_temp;
@@ -78,6 +85,7 @@ Relay_Off();
     }
 
     Delay(1);
+	}
   }
 }
 
@@ -95,6 +103,7 @@ static void Delay(__IO uint32_t nCount)
 void After_Found_Card(void)
 
 {
+
   // char display_str[50];
   // sprintf(display_str, "UID: %02X %02X %02X %02X",
   //         Now_Card_UID[0], Now_Card_UID[1], Now_Card_UID[2], Now_Card_UID[3]);
@@ -163,18 +172,21 @@ void Show_User_Mode(void)
 {
   if (USER_MODE == 0)
   {
-    ILI9341_DispStringLine_EN(LINE(1), " MODE 0 ");
+			ILI9341_DispStringLine_EN(LINE(1), " MODE 0 Temperature detect ");
+		 ILI9341_DispStringLine_EN(LINE(15), "                                            ");
+		 ILI9341_DispStringLine_EN(LINE(16), "                                            ");
+		 ILI9341_DispStringLine_EN(LINE(17), "                                            ");
   }
   else if (USER_MODE == 1)
   {
-    ILI9341_DispStringLine_EN(LINE(1), " MODE 1 ");
+    ILI9341_DispStringLine_EN(LINE(1), " MODE 1                                 ");
   }
   else if (USER_MODE == 2)
   {
-    ILI9341_DispStringLine_EN(LINE(1), " MODE 2 ");
+    ILI9341_DispStringLine_EN(LINE(1), " MODE 2                                 ");
   }
   else if (USER_MODE == 3)
   {
-    ILI9341_DispStringLine_EN(LINE(1), " MODE 3");
+    ILI9341_DispStringLine_EN(LINE(1), " MODE 3                                  ");
   }
 }
