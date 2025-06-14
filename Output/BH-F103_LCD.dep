@@ -869,7 +869,7 @@ I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x6551DD3E)
 I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x6551DD3E)
 I (..\..\Libraries\FWlib\inc\stm32f10x_wwdg.h)(0x6551DD3E)
 I (..\..\Libraries\FWlib\inc\misc.h)(0x6551DD3E)
-F (..\..\User\RC522\RC522.c)(0x6842E6ED)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\User\RC522 -I ..\..\User\MySPI -I ..\..\User\lcd -I ..\..\User\font -I ..\..\User\usart-I.\RTE\_LCD-ID:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\rc522.o --omf_browse ..\..\output\rc522.crf --depend ..\..\output\rc522.d)
+F (..\..\User\RC522\RC522.c)(0x684CF410)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\User\RC522 -I ..\..\User\MySPI -I ..\..\User\lcd -I ..\..\User\font -I ..\..\User\usart-I.\RTE\_LCD-ID:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-ID:\keil\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\rc522.o --omf_browse ..\..\output\rc522.crf --depend ..\..\output\rc522.d)
 I (..\..\Libraries\CMSIS\stm32f10x.h)(0x6551DD3E)
 I (..\..\Libraries\CMSIS\core_cm3.h)(0x6551DD3E)
 I (D:\keil\ARM\ARMCC\include\stdint.h)(0x588B8344)
